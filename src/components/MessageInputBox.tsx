@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import EmojiPicker, { Theme } from "emoji-picker-react";
-import useClickOutside from "../hooks/useClickOutside";
-import AttachmentDropdown from "./Dropdowns/AttachmentDropdown";
+import React, { useState } from 'react'
+import EmojiPicker, { Theme } from 'emoji-picker-react'
+import useClickOutside from '../hooks/useClickOutside'
+import AttachmentDropdown from './Dropdowns/AttachmentDropdown'
 
 const MessageInputBox: React.FC = () => {
-  const [emojiBoxOpen, setEmojiBoxOpen] = useState(false);
+  const [emojiBoxOpen, setEmojiBoxOpen] = useState(false)
 
   const emojiBoxRef = useClickOutside(() => {
-    setEmojiBoxOpen(false);
-  });
+    setEmojiBoxOpen(false)
+  })
 
   return (
     <>
@@ -17,15 +17,15 @@ const MessageInputBox: React.FC = () => {
           <div>
             <div
               ref={emojiBoxRef}
-              className={`absolute -top-[460px] transition-all ${emojiBoxOpen ? "block " : "hidden"}`}
+              className={`absolute -top-[460px] transition-all ${emojiBoxOpen ? 'block ' : 'hidden'}`}
             >
               <EmojiPicker
-                theme={localStorage.getItem("color-theme") as Theme}
+                theme={localStorage.getItem('color-theme') as Theme}
               />
             </div>
             <button
               type="button"
-              className={`min-w-10 min-h-10 rounded-full text-gray-600 dark:text-gray-400 hover:text-light-accent dark:hover:text-dark-accent hover:bg-gray-100 dark:hover:bg-dark-background ${emojiBoxOpen ? "text-light-accent dark:text-dark-accent bg-gray-100 dark:bg-dark-background" : ""}`}
+              className={`min-w-10 min-h-10 rounded-full text-gray-600 dark:text-gray-400 hover:text-light-accent dark:hover:text-dark-accent hover:bg-gray-100 dark:hover:bg-dark-background ${emojiBoxOpen ? 'text-light-accent dark:text-dark-accent bg-gray-100 dark:bg-dark-background' : ''}`}
               onClick={() => setEmojiBoxOpen(!emojiBoxOpen)}
             >
               <i className="fa-regular fa-smile"></i>
@@ -51,7 +51,7 @@ const MessageInputBox: React.FC = () => {
         </button>
       </form>
     </>
-  );
-};
+  )
+}
 
-export default MessageInputBox;
+export default MessageInputBox

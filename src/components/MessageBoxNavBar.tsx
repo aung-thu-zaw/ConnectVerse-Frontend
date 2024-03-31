@@ -1,7 +1,7 @@
-import React from "react";
-import ChatMenuDropdown from "./Dropdowns/ChatMenuDropdown";
-import DropdownItem from "./Dropdowns/DropdownItem";
-import VideoChatPanel from "./VideoChatPanel";
+import React from 'react'
+import ChatMenuDropdown from './Dropdowns/ChatMenuDropdown'
+import DropdownItem from './Dropdowns/DropdownItem'
+import VideoChatPanel from './VideoChatPanel'
 
 const MessageBoxNavBar: React.FC = () => {
   return (
@@ -122,7 +122,7 @@ const MessageBoxNavBar: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default MessageBoxNavBar;
+export default MessageBoxNavBar

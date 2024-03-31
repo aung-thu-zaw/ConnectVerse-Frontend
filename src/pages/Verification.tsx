@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../assets/images/logo-color.png";
 
-const Auth: React.FC = () => {
+const Verification: React.FC = () => {
   return (
     <>
       <div className=" h-screen  bg-light-background text-light-text dark:bg-dark-background dark:text-dark-text">
@@ -44,4 +44,4 @@ const Auth: React.FC = () => {
   );
 };
 
-export default Auth;
+export default Verification;

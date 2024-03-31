@@ -1,4 +1,5 @@
-import React from "react";
+import React from 'react'
+import CountBadge from './Badges/CountBadge'
 
 const FolderTabs: React.FC = () => {
   return (
@@ -9,49 +10,39 @@ const FolderTabs: React.FC = () => {
           className="text-sm px-3 py-2.5 rounded-t-md space-x-1.5 font-medium flex items-center justify-center border-b-[3px] text-light-text hover:bg-gray-100 border-b-light-accent dark:text-dark-text dark:hover:bg-dark-secondary  dark:border-b-dark-accent"
         >
           <span className="block">All</span>
-          <div className="text-white rounded-full w-4 h-4 text-[0.6rem] flex items-center justify-center bg-light-accent dark:bg-dark-accent">
-            4
-          </div>
+          <CountBadge count={20} />
         </button>
         <button
           type="button"
           className="text-sm px-3 py-2.5 rounded-t-md space-x-1.5 font-medium flex items-center justify-center text-light-text hover:bg-gray-100 dark:text-dark-text dark:hover:bg-dark-secondary"
         >
           <span className="block">English</span>
-          <div className="text-white rounded-full w-4 h-4 text-[0.6rem] flex items-center justify-center bg-light-accent dark:bg-dark-accent">
-            40
-          </div>
+          <CountBadge count={4} />
         </button>
         <button
           type="button"
           className="text-sm px-3 py-2.5 rounded-t-md space-x-1.5 font-medium flex items-center justify-center text-light-text hover:bg-gray-100 dark:text-dark-text dark:hover:bg-dark-secondary"
         >
           <span className="block">Programming</span>
-          <div className="text-white rounded-full w-4 h-4 text-[0.6rem] flex items-center justify-center bg-light-accent dark:bg-dark-accent">
-            13
-          </div>
+          <CountBadge count={2} />
         </button>
         <button
           type="button"
           className="text-sm px-3 py-2.5 rounded-t-md space-x-1.5 font-medium flex items-center justify-center text-light-text hover:bg-gray-100 dark:text-dark-text dark:hover:bg-dark-secondary"
         >
           <span className="block">Movie</span>
-          <div className="text-white rounded-full w-4 h-4 text-[0.6rem] flex items-center justify-center bg-light-accent dark:bg-dark-accent">
-            1
-          </div>
+          <CountBadge count={40} />
         </button>
         <button
           type="button"
           className="text-sm px-3 py-2.5 rounded-t-md space-x-1.5 font-medium flex items-center justify-center text-light-text hover:bg-gray-100 dark:text-dark-text dark:hover:bg-dark-secondary"
         >
           <span className="block">Music</span>
-          <div className="text-white rounded-full w-4 h-4 text-[0.6rem] flex items-center justify-center bg-light-accent dark:bg-dark-accent">
-            9
-          </div>
+          <CountBadge count={10} />
         </button>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default FolderTabs;
+export default FolderTabs

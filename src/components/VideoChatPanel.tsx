@@ -1,18 +1,18 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from 'react'
 
 const VideoChatPanel: React.FC = () => {
-  const [panelOpen, setPanelOpen] = useState<boolean>(false);
-  const panelRef = useRef<HTMLDivElement>(null);
+  const [panelOpen, setPanelOpen] = useState<boolean>(false)
+  const panelRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const keyHandler = ({ keyCode }: { keyCode: number }) => {
-      if (!panelOpen || keyCode !== 27) return;
-      setPanelOpen(false);
-    };
-    document.addEventListener("keydown", keyHandler);
+      if (!panelOpen || keyCode !== 27) return
+      setPanelOpen(false)
+    }
+    document.addEventListener('keydown', keyHandler)
 
-    return () => document.removeEventListener("keydown", keyHandler);
-  }, [panelOpen]);
+    return () => document.removeEventListener('keydown', keyHandler)
+  }, [panelOpen])
 
   return (
     <>
@@ -28,7 +28,7 @@ const VideoChatPanel: React.FC = () => {
         <div
           ref={panelRef}
           className={`fixed left-0 top-0 z-30 flex flex-col h-full min-h-screen w-full items-center space-y-5 justify-center bg-light-background dark:bg-dark-background px-4 py-5 ${
-            panelOpen ? "animate-zoomIn" : "animate-zoomOut"
+            panelOpen ? 'animate-zoomIn' : 'animate-zoomOut'
           }`}
         >
           <button
@@ -67,18 +67,11 @@ const VideoChatPanel: React.FC = () => {
             >
               <i className="fa-solid fa-video"></i>
             </button>
-
-            {/* <button
-              type="button"
-              className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center"
-            >
-              <i className="fa-solid fa-desktop"></i>
-            </button> */}
           </div>
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default VideoChatPanel;
+export default VideoChatPanel

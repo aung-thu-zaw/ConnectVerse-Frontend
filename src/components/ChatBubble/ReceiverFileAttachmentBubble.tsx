@@ -1,7 +1,7 @@
-import React from "react";
-import MessageActionDropdown from "../Dropdowns/MessageActionDropdown";
-import DropdownItem from "../Dropdowns/DropdownItem";
-import ReactionEmojiDropdown from "../Dropdowns/ReactionEmojiDropdown";
+import React from 'react'
+import MessageActionDropdown from '../Dropdowns/MessageActionDropdown'
+import DropdownItem from '../Dropdowns/DropdownItem'
+import ReactionEmojiDropdown from '../Dropdowns/ReactionEmojiDropdown'
 
 const ReceiverFileAttachmentBubble: React.FC = () => {
   return (
@@ -185,7 +185,7 @@ const ReceiverFileAttachmentBubble: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default ReceiverFileAttachmentBubble;
+export default ReceiverFileAttachmentBubble

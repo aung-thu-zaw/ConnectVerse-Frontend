@@ -1,5 +1,5 @@
-import React from "react";
-import MessageBoxSearchResultList from "./MessageBoxSearchResultList";
+import React from 'react'
+import MessageBoxSearchResultList from './MessageBoxSearchResultList'
 
 const MessageSearchBox: React.FC = () => {
   return (
@@ -80,7 +80,7 @@ const MessageSearchBox: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default MessageSearchBox;
+export default MessageSearchBox

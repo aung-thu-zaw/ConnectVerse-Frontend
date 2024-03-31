@@ -1,52 +1,52 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react'
 
 const ToggleModeButton: React.FC = () => {
   useEffect(() => {
-    const themeToggleBtn = document.getElementById("theme-toggle");
+    const themeToggleBtn = document.getElementById('theme-toggle')
     const themeToggleDarkIcon = document.getElementById(
-      "theme-toggle-dark-icon"
-    );
+      'theme-toggle-dark-icon',
+    )
     const themeToggleLightIcon = document.getElementById(
-      "theme-toggle-light-icon"
-    );
+      'theme-toggle-light-icon',
+    )
 
     const toggleMode = () => {
       // Toggle icon
-      themeToggleDarkIcon?.classList.toggle("hidden");
-      themeToggleLightIcon?.classList.toggle("hidden");
+      themeToggleDarkIcon?.classList.toggle('hidden')
+      themeToggleLightIcon?.classList.toggle('hidden')
 
       // Toggle theme
-      if (document.documentElement.classList.contains("dark")) {
-        document.documentElement.classList.remove("dark");
-        localStorage.setItem("color-theme", "light");
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark')
+        localStorage.setItem('color-theme', 'light')
       } else {
-        document.documentElement.classList.add("dark");
-        localStorage.setItem("color-theme", "dark");
+        document.documentElement.classList.add('dark')
+        localStorage.setItem('color-theme', 'dark')
       }
-    };
+    }
 
     if (
-      localStorage.getItem("color-theme") === "dark" ||
-      (!localStorage.getItem("color-theme") &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
+      localStorage.getItem('color-theme') === 'dark' ||
+      (!localStorage.getItem('color-theme') &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
     ) {
       // Set dark mode
-      document.documentElement.classList.add("dark");
-      themeToggleLightIcon?.classList.remove("hidden");
+      document.documentElement.classList.add('dark')
+      themeToggleLightIcon?.classList.remove('hidden')
     } else {
       // Set light mode
-      document.documentElement.classList.remove("dark");
-      themeToggleDarkIcon?.classList.remove("hidden");
+      document.documentElement.classList.remove('dark')
+      themeToggleDarkIcon?.classList.remove('hidden')
     }
 
     // Listen for toggle button click
-    themeToggleBtn?.addEventListener("click", toggleMode);
+    themeToggleBtn?.addEventListener('click', toggleMode)
 
     return () => {
       // Clean up event listener
-      themeToggleBtn?.removeEventListener("click", toggleMode);
-    };
-  }, []);
+      themeToggleBtn?.removeEventListener('click', toggleMode)
+    }
+  }, [])
 
   return (
     <>
@@ -65,7 +65,7 @@ const ToggleModeButton: React.FC = () => {
         </span>
       </button>
     </>
-  );
-};
+  )
+}
 
-export default ToggleModeButton;
+export default ToggleModeButton

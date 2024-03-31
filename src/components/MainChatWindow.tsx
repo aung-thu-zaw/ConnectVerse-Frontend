@@ -1,14 +1,14 @@
-import React from "react";
-import MessageBoxNavBar from "./MessageBoxNavBar";
-import ReceiverMessageBubble from "./ChatBubble/ReceiverMessageBubble";
-import SenderMessageBubble from "./ChatBubble/SenderMessageBubble";
-import ReceiverFileAttachmentBubble from "./ChatBubble/ReceiverFileAttachmentBubble";
-import SenderFileAttachmentBubble from "./ChatBubble/SenderFileAttachmentBubble";
-import ReceiverImageAttachmentBubble from "./ChatBubble/ReceiverImageAttachmentBubble";
-import SenderImageAttachmentBubble from "./ChatBubble/SenderImageAttachmentBubble";
-import MessageInputBox from "./MessageInputBox";
+import React from 'react'
+import MessageBoxNavBar from './MessageBoxNavBar'
+import ReceiverMessageBubble from './ChatBubble/ReceiverMessageBubble'
+import SenderMessageBubble from './ChatBubble/SenderMessageBubble'
+import ReceiverFileAttachmentBubble from './ChatBubble/ReceiverFileAttachmentBubble'
+import SenderFileAttachmentBubble from './ChatBubble/SenderFileAttachmentBubble'
+import ReceiverImageAttachmentBubble from './ChatBubble/ReceiverImageAttachmentBubble'
+import SenderImageAttachmentBubble from './ChatBubble/SenderImageAttachmentBubble'
+import MessageInputBox from './MessageInputBox'
 
-const MainChatMessageInterface: React.FC = () => {
+const MainChatWindow: React.FC = () => {
   return (
     <>
       <main className="hidden w-full md:block h-full">
@@ -21,9 +21,9 @@ const MainChatMessageInterface: React.FC = () => {
           style={{
             backgroundImage:
               "url('https://img.freepik.com/premium-vector/chat-time-chalk-drawing-design-doodle-vector-clip-art-set-elements-seamless-pattern-icons-speech-bubble-message-emoji-letter-gadget-white-monochrome-design-isolated-dark-background_153823-116.jpg')",
-            backgroundPosition: "center",
-            backgroundColor: "rgba(0, 0, 0, 0.8)",
-            backgroundBlendMode: "multiply",
+            backgroundPosition: 'center',
+            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+            backgroundBlendMode: 'multiply',
             //   backgroundImage:
             //     "url('https://st3.depositphotos.com/28989096/35612/v/450/depositphotos_356120386-stock-illustration-chat-time-cartoon-doodle-seamless.jpg')",
             //   backgroundPosition: "center",
@@ -67,7 +67,7 @@ const MainChatMessageInterface: React.FC = () => {
         </div>
       </main>
     </>
-  );
-};
+  )
+}
 
-export default MainChatMessageInterface;
+export default MainChatWindow

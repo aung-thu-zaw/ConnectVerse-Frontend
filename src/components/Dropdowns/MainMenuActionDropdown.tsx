@@ -1,31 +1,28 @@
-import React, { useState } from "react";
-import useClickOutside from "../../hooks/useClickOutside";
-import ToggleModeButton from "../ToggleModeButton";
+import React, { useState } from 'react'
+import useClickOutside from '../../hooks/useClickOutside'
+import ToggleModeButton from '../ToggleModeButton'
+import ToolButton from '../Buttons/ToolButton'
 
 const MainMenuActionDropdown: React.FC = () => {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false)
 
   const mainActionRef = useClickOutside(() => {
-    setDropdownOpen(false);
-  });
+    setDropdownOpen(false)
+  })
 
   return (
     <>
       <div ref={mainActionRef} className="w-auto">
         <div className="relative">
-          <button
-            type="button"
-            className="min-w-10 min-h-10 rounded-full text-light-text hover:bg-gray-100 dark:bg-dark-secondary dark:text-gray-100"
-            onClick={() => setDropdownOpen(!dropdownOpen)}
-          >
+          <ToolButton border onClick={() => setDropdownOpen(!dropdownOpen)}>
             <i className="fa-solid fa-bars"></i>
-          </button>
+          </ToolButton>
 
           <div
             className={`shadow-1 absolute left-0 mt-5 border border-gray-200 bg-light-background text-light-text dark:shadow-box-dark dark:border-dark-secondary dark:bg-dark-background dark:text-dark-text p-2 min-w-[210px] w-auto rounded-md transition-all ${
               dropdownOpen
-                ? "top-10 opacity-100 visible"
-                : "-top-[100%] invisible opacity-0"
+                ? 'top-10 opacity-100 visible'
+                : '-top-[100%] invisible opacity-0'
             }`}
           >
             <button
@@ -68,7 +65,7 @@ const MainMenuActionDropdown: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default MainMenuActionDropdown;
+export default MainMenuActionDropdown
